@@ -14,14 +14,31 @@ body {
   background: hotpink;
 }
 
-.rotate {
-  transform: rotate(45deg);
+.picture {
+  width: 200px;
+  height: 200px;
+  background-image: url(https://source.unsplash.com/random/200x200);
 }
 
-.radius {
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: 5px aquamarine solid;
   border-radius: 50%;
 }
 
-.background {
-  background-color: aquamarine;
+.text {
+  background: steelblue;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  background: hotpink;
 }
