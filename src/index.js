@@ -1,3 +1,55 @@
-import AppHeader from './components/AppHeader'
+console.clear()
+const box = document.querySelector('.box')
+const picture = document.querySelector('.picture')
+const circle = document.querySelector('.circle')
+const text = document.querySelector('.text')
 
-document.body.append(AppHeader('JavaScript App Template'))
+const buttonBox = document.querySelector('.button-box')
+const buttonPicture = document.querySelector('.button-picture')
+const buttonCircle = document.querySelector('.button-circle')
+const buttonText = document.querySelector('.button-text')
+
+buttonBox.addEventListener('click', () => {
+  box.classList.remove('hidden')
+  picture.classList.add('hidden')
+  circle.classList.add('hidden')
+  text.classList.add('hidden')
+
+  buttonBox.classList.add('active')
+  buttonPicture.classList.remove('active')
+  buttonCircle.classList.remove('active')
+  buttonText.classList.remove('active')
+})
+buttonPicture.addEventListener('click', () => {
+  box.classList.add('hidden')
+  picture.classList.remove('hidden')
+  circle.classList.add('hidden')
+  text.classList.add('hidden')
+
+  buttonBox.classList.remove('active')
+  buttonPicture.classList.add('active')
+  buttonCircle.classList.remove('active')
+  buttonText.classList.remove('active')
+})
+buttonCircle.addEventListener('click', () => {
+  box.classList.add('hidden')
+  picture.classList.add('hidden')
+  circle.classList.remove('hidden')
+  text.classList.add('hidden')
+
+  buttonBox.classList.remove('active')
+  buttonPicture.classList.remove('active')
+  buttonCircle.classList.add('active')
+  buttonText.classList.remove('active')
+})
+buttonText.addEventListener('click', () => {
+  box.classList.add('hidden')
+  picture.classList.add('hidden')
+  circle.classList.add('hidden')
+  text.classList.remove('hidden')
+
+  buttonBox.classList.remove('active')
+  buttonPicture.classList.remove('active')
+  buttonCircle.classList.remove('active')
+  buttonText.classList.add('active')
+})
