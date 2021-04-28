@@ -1,11 +1,18 @@
 const form = document.querySelector('[data-form]')
-const input = document.querySelector('[name=class]')
 const box = document.querySelector('[data-box]')
+const input = document.querySelector('[name=class]')
+const output = document.querySelector('[data-output]')
 
 form.addEventListener('submit', event => {
   event.preventDefault()
-  // box.classList.toggle(input.value)
   box.className = 'box ' + input.value
+  // output.innerText = input.value.toUpperCase()
+  // input.value = ''
+  // input.focus()
+
+  const inputText = input.value
   input.value = ''
   input.focus()
+  const outputText = inputText.toUpperCase()
+  output.value = outputText
 })
