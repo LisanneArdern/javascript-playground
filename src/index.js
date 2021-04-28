@@ -1,8 +1,11 @@
 const form = document.querySelector('[data-form]')
-const header = document.querySelector('[data-header]')
-const input = document.querySelector('[name=header-text]')
+const input = document.querySelector('[name=class]')
+const box = document.querySelector('[data-box]')
 
 form.addEventListener('submit', event => {
   event.preventDefault()
-  header.innerText = input.value
+  // box.classList.toggle(input.value)
+  box.className = 'box ' + input.value
+  input.value = ''
+  input.focus()
 })
